@@ -2,7 +2,7 @@ name: CI Build
 
 on:
   pull_request:
-    types: [opened, ready_for_review, closed]
+    types: [opened, ready_for_review]
   merge_group:
       types: [checks_requested]
   workflow_dispatch:
