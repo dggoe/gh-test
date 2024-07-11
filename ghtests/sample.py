@@ -1,2 +1,2 @@
 def convert(txt):
-    return "<%s>" % txt.upper()
+    return txt.upper()
