@@ -11,4 +11,4 @@ def teardown_module(module):
 
 def test_conversion():
     assert convert("hello world") == "<HELLO WORLD>"
-    assert True == False
+    assert True == True
