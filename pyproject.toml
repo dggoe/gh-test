@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "ghtests"
+version = "0.0.1"
+description = "Python test"
+authors = ["test"]
+
+license = "Apache-2.0"
+readme = "README.rst"
+repository = "https://google.de"
+documentation = "https://google.de"
+keywords=[ "test", ]
+classifiers = [
+    "Development Status :: 4 - Beta",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+testfixtures = "^7.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry_bumpversion.file."matchms/__version__.py"]
+
+[tool.isort]
+sections = "FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+no_lines_before = "FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+lines_after_imports = 2
+known_first_party = "matchms"
+skip = "readthedocs/conf.py"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+    "integration-tests",
+]
+
+[build_sphinx]
+source-dir = "docs"
+build-dir = "docs/_build"
+all_files = 1
+builder = "html"
